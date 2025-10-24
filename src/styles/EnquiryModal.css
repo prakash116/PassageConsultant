@@ -1,0 +1,482 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.App {
+    width: 100%;
+}
+
+/* Responsive adjustments for App */
+@media (max-width: 768px) {
+    .App {
+        overflow-x: hidden;
+    }
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.modal-container {
+    width: 90%;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 10;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.close-button:hover {
+    background-color: #f0f0f0;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: row;
+    min-height: 450px;
+}
+
+/* Left side of modal */
+.modal-left {
+    flex: 1;
+    background-color: #f0f2f5;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-left h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.steps-container {
+    margin-bottom: 30px;
+}
+
+.step {
+    margin-bottom: 12px;
+}
+
+.step p {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.step span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.benefit-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+}
+
+.benefit-circle i {
+    font-size: 16px;
+    color: #00BCD4;
+}
+
+.benefit-text p {
+    margin: 0;
+    font-size: 13px;
+    color: #333;
+    font-weight: 500;
+}
+
+.call-section {
+    margin-top: auto;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.call-section p {
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.call-section a {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.call-section a:hover {
+    text-decoration: underline;
+}
+
+.call-section i {
+    margin-right: 5px;
+}
+
+/* Right side of modal */
+.modal-right {
+    flex: 1;
+    background-color: #1a2b47;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+.enquiry-form {
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.form-title {
+    font-size: 22px;
+    color: white;
+    margin: 0 0 25px 0;
+    font-weight: 600;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #34455a;
+    border-radius: 4px;
+    font-size: 13px;
+    box-sizing: border-box;
+    background-color: #1a2b47;
+    color: white;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.recaptcha {
+    display: flex;
+    align-items: center;
+    border: 1px solid #34455a;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 15px;
+    background-color: #1a2b47;
+}
+
+.g-recaptcha {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.g-recaptcha input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+.recaptcha-logo {
+    margin-left: auto;
+    color: #999;
+}
+
+.recaptcha-logo i {
+    font-size: 20px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #00BCD4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+.submit-btn:hover {
+    background-color: #00ACC1;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .modal-container {
+        width: 95%;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .modal-body {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .modal-left, .modal-right {
+        padding: 15px;
+    }
+
+    .modal-left h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .step p {
+        font-size: 14px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .benefit-circle {
+        width: 32px;
+        height: 32px;
+    }
+
+    .benefit-circle i {
+        font-size: 14px;
+    }
+
+    .benefit-text p {
+        font-size: 12px;
+    }
+
+    .call-section p {
+        font-size: 14px;
+    }
+
+    .call-section a {
+        font-size: 16px;
+    }
+
+    .form-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .form-group textarea {
+        min-height: 70px;
+    }
+
+    .recaptcha {
+        padding: 6px;
+    }
+
+    .g-recaptcha input[type="checkbox"] {
+        width: 14px;
+        height: 14px;
+    }
+
+    .recaptcha-logo i {
+        font-size: 18px;
+    }
+
+    .submit-btn {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-container {
+        width: 98%;
+        border-radius: 4px;
+    }
+
+    .modal-header {
+        padding: 6px;
+        top: 6px;
+        right: 6px;
+    }
+
+    .close-button {
+        width: 24px;
+        height: 24px;
+        font-size: 16px;
+    }
+
+    .modal-left, .modal-right {
+        padding: 12px;
+    }
+
+    .modal-left h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .steps-container {
+        margin-bottom: 20px;
+    }
+
+    .step {
+        margin-bottom: 10px;
+    }
+
+    .step p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .benefits-grid {
+        gap: 8px;
+    }
+
+    .benefit {
+        gap: 10px;
+    }
+
+    .benefit-circle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .benefit-circle i {
+        font-size: 13px;
+    }
+
+    .benefit-text p {
+        font-size: 11px;
+    }
+
+    .call-section {
+        padding-top: 10px;
+    }
+
+    .call-section p {
+        font-size: 13px;
+    }
+
+    .call-section a {
+        font-size: 15px;
+    }
+
+    .form-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 7px 9px;
+        font-size: 11px;
+    }
+
+    .form-group textarea {
+        min-height: 60px;
+    }
+
+    .recaptcha {
+        padding: 5px;
+    }
+
+    .g-recaptcha {
+        gap: 6px;
+    }
+
+    .g-recaptcha input[type="checkbox"] {
+        width: 13px;
+        height: 13px;
+    }
+
+    .recaptcha-logo i {
+        font-size: 16px;
+    }
+
+    .submit-btn {
+        padding: 7px;
+        font-size: 13px;
+    }
+}

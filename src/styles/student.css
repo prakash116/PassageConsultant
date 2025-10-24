@@ -1,0 +1,139 @@
+/* student.css  –  final responsive tune-up */
+
+/* 1. Base reset */
+*{
+  margin:0;
+  box-sizing:border-box;
+  font-family:"Cambria","Times New Roman",Times,serif;
+}
+
+/* 2. Hero section (image stays 80 vh tall) */
+.student-hero{
+  position:relative;
+  width:100%;
+  min-height:80vh;             /* keep original image height        */
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2rem;
+  color:#fff;
+  text-align:center;
+}
+
+/* 3. Dark overlay */
+.student-hero__overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.55);
+  z-index:1;
+}
+
+/* 4. Content block */
+.student-hero__content{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  z-index:2;
+  width:90vw;
+  max-width:960px;     
+         /* still caps width on huge screens  */
+  backdrop-filter:blur(1px);
+}
+
+/* 5. **FLUID** type-scale – one rule set, no break-points       */
+/*    ►  As viewport shrinks, `vw` term gets smaller → fonts shrink */
+/*    ►  MIN keeps text readable on the tiniest phones             */
+/*    ►  MAX prevents it from ballooning on 4-K monitors           */
+
+.student-hero__content h1{
+  font-weight:700;
+  line-height:1.15;
+  margin-bottom:.6rem;
+  /*   MIN      BASE + SLOPE·vw      MAX  */
+  font-size:clamp(1.35rem, 0.8rem + 4vw , 3.3rem);
+  text-shadow:0 2px 4px rgba(0,0,0,.6);
+}
+
+.student-hero__content h2{
+  font-weight:600;
+  line-height:1.25;
+  margin-bottom:.8rem;
+  font-size:clamp(1rem , 0.6rem + 2.8vw , 2rem);
+  text-shadow:0 1px 3px rgba(0,0,0,.55);
+}
+
+.student-hero__content p{
+  line-height:1.55;
+  margin-bottom:.55rem;
+  font-size:clamp(.78rem , 0.45rem + 1.8vw , 1.15rem);
+  text-shadow:0 1px 2px rgba(0,0,0,.5);
+}
+@media (max-width: 768px) {
+  .student-hero {
+    max-height: 300px; /* Smaller on mobile */
+  }
+  
+  .student-hero__image {
+    height: 300px; /* Smaller on mobile */
+  }
+  
+  .student-hero__content h1 {
+    font-size: 2rem;
+  }
+
+  .student-hero__content p {
+    font-size: 1rem;
+  }
+}
+
+/* 6. Small phones (≤ 480 px) – first shrink */
+@media (max-width:480px){
+  .student-hero{ padding:1.25rem; }
+  .student-hero__content{ width:96vw; }
+  .student-hero__content h1{ font-size:clamp(1.5rem,6vw + .3rem,2.25rem); }
+  .student-hero__content h2{ font-size:clamp(1.1rem,5vw + .3rem,1.55rem); }
+  .student-hero__content p { font-size:clamp(.8rem,3vw + .3rem,1rem); }
+}
+
+/* 7. MICRO-mobile (iPhone SE, ≤ 375 px) – aggressive squeeze */
+@media (max-width:375px){
+  /* allow the section to grow if required, but keep image width untouched */
+  .student-hero{ padding:1rem .5rem; }
+
+  /* move block slightly downward so top text never hides under browser chrome */
+  .student-hero__content{
+    top:8%;
+    transform:translateX(-50%);   /* only horizontal centring */
+    max-width:340px;
+  }
+
+  /* even smaller type & tighter lines */
+  .student-hero__content h1{
+    font-size:1.4rem;             /* ≈ 22 px */
+    line-height:1.15;
+    margin-bottom:.5rem;
+  }
+  .student-hero__content h2{
+    font-size:1.05rem;            /* ≈ 17 px */
+    line-height:1.25;
+    margin-bottom:.7rem;
+  }
+  .student-hero__content p{
+    font-size:.8rem;              /* ≈ 13 px */
+    line-height:1.45;
+  }
+}
+
+@media (max-width: 768px) {
+  .student-hero { padding: 1.5rem; }
+}
+
+/* 7. Micro-phones (≤ 375 px) */
+@media (max-width: 375px) {
+  .student-hero { padding: 1rem .75rem; }
+  .student-hero__content { width: 96vw; }
+}

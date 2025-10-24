@@ -1,0 +1,80 @@
+/* uppernavbar.css */
+*{
+  font-family: 'Cambria', 'Times New Roman', Times, serif;
+}
+.upper-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e2430;
+  color: white;
+  padding: 10px 40px;
+  font-size: 14px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-info a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.email-icon {
+  font-size: 16px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsive adjustments for UpperNavbar */
+@media (max-width: 768px) {
+  .upper-navbar {
+      display: none;
+      visibility: hidden;
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 20px;
+      font-size: 12px;
+  }
+
+  .contact-info {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+  }
+
+  .social-icons {
+      gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .upper-navbar {
+      display: none;
+      visibility: hidden;
+      padding: 8px 15px;
+      font-size: 10px;
+  }
+
+  .contact-info {
+      gap: 8px;
+  }
+
+  .social-icons {
+      gap: 8px;
+  }
+}

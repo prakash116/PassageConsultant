@@ -1,0 +1,496 @@
+*{
+  font-family: "Cambria", "Cochin", Georgia, Times, 'Times New Roman', serif;
+}
+
+/* lowernavbar.css */
+.lower-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 15px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 60px;
+}
+
+.brand-text h1 {
+  color: #0058a2;
+  font-size: 24px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.brand-text h2 {
+  color: #0058a2;
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  position: relative;
+}
+
+.navigation li a, 
+.navigation li span {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.navigation li.active a {
+  color: #f8a11c;
+}
+
+.navigation li span:hover {
+  color: #f8a11c;
+}
+
+.search-call {
+  display: flex;
+  gap: 10px;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.call-btn {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+ .call-btn a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: black;
+  text-decoration: none;
+}
+/* Mobile menu toggle button */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 24px;
+  color: #0058a2;
+}
+
+/* Mega dropdown menu styles */
+.mega-dropdown-container {
+  position: fixed;
+  top: 123px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mega-dropdown-container.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mega-dropdown {
+  width: 100%;
+  max-width: 1200px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.mega-dropdown-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.dropdown-column {
+  width: calc(100% / 6);
+  padding: 0 10px;
+}
+
+.dropdown-column h3 {
+  color: #f8a11c;
+  font-size: 16px;
+  margin: 0 0 10px 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #f8a11c;
+}
+
+.dropdown-column ul {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-column li {
+  margin-bottom: 8px;
+  display: block;
+}
+
+.dropdown-column li a {
+  color: #666;
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  display: block;
+  transition: color 0.2s;
+}
+
+.dropdown-column li a:hover {
+  color: #0058a2;
+}
+
+/* Blog hover dropdown */
+.blog-dropdown {
+  position: relative;
+}
+
+.blog-dropdown .dropdown-toggle {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.blog-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  min-width: 250px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 100;
+}
+
+.blog-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.blog-dropdown .dropdown-menu li {
+  margin: 0;
+}
+
+.blog-dropdown .dropdown-menu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.blog-dropdown .dropdown-menu li a:hover {
+  background: #f5f5f5;
+}
+
+/* Large Desktop Adjustments */
+@media (max-width: 1200px) {
+  .dropdown-column {
+    width: calc(100% / 4);
+    margin-bottom: 15px;
+  }
+  
+  .mega-dropdown {
+    max-width: 90%;
+  }
+}
+
+/* Medium Desktop/Tablet Landscape */
+@media (max-width: 1024px) {
+  .lower-navbar {
+    padding: 15px 20px;
+  }
+  
+  .navigation ul {
+    gap: 20px;
+  }
+  
+  .dropdown-column {
+    width: calc(100% / 3);
+    margin-bottom: 20px;
+  }
+  
+  .mega-dropdown-container {
+    top: 110px;
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+  .lower-navbar {
+    flex-wrap: wrap;
+    padding: 12px 15px;
+    position: relative;
+  }
+  
+  .logo-container {
+    flex: 1;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  .brand-text h1 {
+    font-size: 18px;
+  }
+  
+  .brand-text h2 {
+    font-size: 14px;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    order: 3;
+    margin-left: 10px;
+  }
+  
+  .navigation {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    order: 4;
+    display: none;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 200;
+  }
+  
+  .navigation.active {
+    display: block;
+  }
+  
+  .navigation ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 0;
+  }
+  
+  .navigation li {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .navigation li:last-child {
+    border-bottom: none;
+  }
+  
+  .navigation li a,
+  .navigation li span {
+    padding: 12px 15px;
+    font-size: 16px;
+    justify-content: space-between;
+  }
+  
+  .search-call {
+    margin-left: auto;
+    order: 2;
+    display: flex;
+    gap: 8px;
+  }
+  
+  .call-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+ 
+  
+  /* Mobile dropdown handling */
+  .mega-dropdown-container {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    width: 100%;
+  }
+  
+  .services-dropdown.active .mega-dropdown-container,
+  .blog-dropdown.active .dropdown-menu {
+    display: block;
+  }
+  
+  .mega-dropdown {
+    box-shadow: none;
+    padding: 0 0 0 15px;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .mega-dropdown-content {
+    flex-direction: column;
+  }
+  
+  .dropdown-column {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  
+  /* Blog dropdown mobile */
+  .blog-dropdown .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    display: none;
+    padding-left: 15px;
+    width: 100%;
+    min-width: unset;
+  }
+  
+  .blog-dropdown:hover .dropdown-menu {
+    display: none; /* Disable hover on mobile */
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 576px) {
+  .lower-navbar {
+    padding: 10px 12px;
+  }
+  
+  .logo {
+    height: 35px;
+  }
+  
+  .brand-text h1 {
+    font-size: 16px;
+  }
+  
+  .brand-text h2 {
+    font-size: 12px;
+  }
+  
+  .search-btn {
+    padding: 3px;
+  }
+  
+  .call-btn {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+  .lower-navbar {
+    padding: 8px 10px;
+  }
+  
+  .logo-container {
+    gap: 5px;
+  }
+  
+  .logo {
+    height: 32px;
+  }
+  
+  .brand-text h1 {
+    font-size: 14px;
+  }
+  
+  .brand-text h2 {
+    display: none; /* Hide on very small screens */
+  }
+  
+  .search-call {
+    gap: 4px;
+  }
+  
+  .search-btn {
+    padding: 2px;
+  }
+  
+  .call-btn {
+    padding: 5px 8px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Show brand text h2 for small screens in a specific way */
+  .brand-text::after {
+    content: "CONSULTANTS LLP.";
+    color: #0058a2;
+    font-size: 10px;
+    display: block;
+    font-weight: bold;
+    margin-top: -2px;
+  }
+}
+
+/* Very Small Mobile */
+@media (max-width: 360px) {
+  .logo {
+    height: 28px;
+  }
+  
+  .brand-text h1 {
+    font-size: 13px;
+  }
+  
+  .call-btn {
+    padding: 4px 6px;
+    font-size: 11px;
+  }
+}
+@media (max-width: 768px) {
+  /* Make blog dropdown work the same way as services dropdown */
+  .blog-dropdown .dropdown-menu.active {
+    display: block !important;
+    padding: 0 0 0 15px;
+  }
+  
+  /* Override the hover behavior for mobile */
+  .blog-dropdown:hover .dropdown-menu {
+    display: none;
+  }
+}

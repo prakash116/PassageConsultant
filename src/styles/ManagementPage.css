@@ -1,0 +1,39 @@
+*{
+  font-family: 'Cambria', 'Times New Roman', Times, serif;
+}
+  
+  .page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: #000000;
+  }
+  
+  .content-container {
+    width: 60vw;
+  }
+  
+  .header {
+    text-align: center;
+  }
+  
+  .header h1 {
+    color: #FFFFFF;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .content-block {
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 20px;
+    border-top: 6px solid #FFA500;
+    margin-top: 20px;
+  }
+  
+  .content-block p {
+    margin: 0;
+    font-size: 16px;
+  }

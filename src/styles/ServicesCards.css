@@ -1,0 +1,189 @@
+*{
+  font-family: 'Cambria', 'Times New Roman', Times, serif;
+}
+
+.services-section {
+  padding: 4rem 1rem;
+  background: #fafafa;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.services-row-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: calc(25% - 1.5rem);
+  min-width: 230px;
+  flex: 1 1 230px;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  background: #fff;
+  border: 2px solid #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-title {
+  font-size: 1.1rem;
+  margin: 0.75rem 0;
+  color: #222;
+}
+
+.service-desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Large Desktop */
+@media (max-width: 1200px) {
+  .service-card {
+    width: calc(33.333% - 1.5rem);
+    flex: 1 1 300px;
+  }
+}
+
+/* Desktop and large tablets */
+@media (max-width: 992px) {
+  .services-section {
+    padding: 3rem 1rem;
+  }
+  
+  .service-card {
+    width: calc(50% - 1.5rem);
+    flex: 1 1 250px;
+    padding: 2rem 1.25rem;
+  }
+  
+  .service-icon {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Medium tablets */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 2.5rem 1rem;
+  }
+  
+  .services-row-container {
+    gap: 1.25rem;
+  }
+  
+  .service-card {
+    padding: 1.75rem 1rem;
+  }
+  
+  .service-title {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .service-desc {
+    font-size: 0.9rem;
+  }
+  
+  .service-icon {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* Small tablets and large phones */
+@media (max-width: 640px) {
+  .services-section {
+    padding: 2rem 0.75rem;
+  }
+  
+  .services-row-container {
+    gap: 1rem;
+  }
+  
+  .service-card {
+    width: calc(100% - 1rem);
+    flex: 1 1 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .services-section {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .service-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .service-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .service-title {
+    font-size: 0.95rem;
+  }
+  
+  .service-desc {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
+
+/* Alternative scroll view for mobile (optional feature) */
+@media (max-width: 640px) {
+  .services-row-container.scroll-view {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0.5rem 0.25rem 1.5rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .services-row-container.scroll-view .service-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+    margin: 0 0.25rem;
+  }
+  
+  /* Hide scrollbar for clean appearance */
+  .services-row-container.scroll-view::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .services-row-container.scroll-view {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}

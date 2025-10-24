@@ -1,0 +1,124 @@
+/* footer.css */
+*{
+  font-family: 'Cambria', 'Times New Roman', Times, serif;
+}
+.footer {
+  background-color: #2d3038;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.tagline{
+  margin-top: 100px;
+}
+/* Base: each section full width */
+.footer-container > div {
+  flex: 0 1 100%;
+  margin-bottom: 30px;
+}
+
+/* Section headings */
+.links-section h3,
+.time-section h3,
+.contact-section h3 {
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* Text adjustments */
+.tagline,
+.links-section a,
+.time-item,
+.contact-section address,
+.contact-item {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Logo sizing */
+.company-section .logo img {
+  width: 100px;
+  height: auto;
+}
+
+/* Quick Links */
+.links-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.links-section li + li {
+  margin-top: 10px;
+}
+.links-section a {
+  color: #fff;
+  text-decoration: none;
+}
+.links-section a:hover {
+  text-decoration: underline;
+}
+
+/* Open Time */
+.time-item {
+  margin-bottom: 12px;
+}
+.time-label {
+  color: #ff9933;
+  display: block;
+  margin-bottom: 4px;
+}
+.time-value {
+  display: block;
+}
+
+/* Contact */
+.contact-section address {
+  font-style: normal;
+  color: #ff9933;
+  margin-bottom: 12px;
+}
+.contact-details .contact-item a{
+  color: #ff9933;
+}
+.contact-details .contact-item + .contact-item {
+  margin-top: 8px;
+}
+
+/* -------- Medium screens (tablets) -------- */
+@media (min-width: 600px) {
+  .footer-container > div {
+    flex: 0 1 48%;
+  }
+}
+
+/* -------- Large screens (desktops) -------- */
+@media (min-width: 992px) {
+  .footer-container > div {
+    flex: 0 1 23%;
+  }
+  .footer {
+    padding: 60px 20px;
+  }
+  .links-section h3,
+  .time-section h3,
+  .contact-section h3 {
+    font-size: 1.25rem;
+  }
+  .tagline,
+  .links-section a,
+  .time-item,
+  .contact-section address,
+  .contact-item {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,316 @@
+
+/* VisaInfo.css */
+*{
+  font-family: 'Cambria', 'Times New Roman', Times, serif;
+}
+.visa-info-container {
+  padding: 2rem 0;
+  background-color: #f9f9f9;
+}
+
+.visa-info-text {
+  flex: 2;
+  padding: 1.5rem;
+  background-color: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+}
+
+.visa-info-text h2, h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.visa-info-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.visa-info-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.visa-info-text ul {
+  margin-bottom: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.visa-info-text li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.enquiry-form {
+  flex: 1;
+  /* visual */
+  background-color: #1e2c44;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  /* spacing */
+  padding: 2rem 1.75rem;
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* heading */
+.enquiry-form h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+/* stack every form row cleanly */
+.enquiry-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.enquiry-form .form-group label {
+  font-weight: 600;
+  color: #fff;
+}
+
+/* unified input / textarea look */
+.enquiry-form input,
+.enquiry-form textarea {
+  width: 100%;                /* full-width on all screens */
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* primary CTA button */
+.enquiry-form .send-message-btn {
+  width: 100%;                /* always fills card width */
+  padding: 1rem;
+  background-color: #ffa500;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.enquiry-form .send-message-btn:hover {
+  background-color: #ff8c00;
+}
+
+
+/* Responsive adjustments for VisaInfo */
+@media (max-width: 1024px) {
+  .visa-info-content {
+      max-width: 900px;
+      gap: 1.5rem;
+  }
+
+  .visa-info-text h2, h3 {
+      font-size: 1.3rem;
+  }
+
+  .visa-info-text p,
+  .visa-info-text li {
+      font-size: 0.95rem;
+  }
+
+  .enquiry-form h2 {
+      font-size: 1.5rem;
+  }
+
+  .enquiry-form .send-message-btn {
+      width: 100%;
+      padding: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .visa-info-content {
+      flex-direction: column;
+      max-width: 700px;
+      gap: 1rem;
+  }
+
+  .visa-info-text {
+      padding: 1rem;
+  }
+
+  .visa-info-text h2 {
+      font-size: 1.2rem;
+  }
+
+  .visa-info-text p,
+  .visa-info-text li {
+      font-size: 0.9rem;
+  }
+
+  .enquiry-form {
+      padding: 1rem;
+  }
+
+  .enquiry-form h2 {
+      font-size: 1.3rem;
+  }
+
+  .enquiry-form input,
+  .enquiry-form textarea {
+      width: 100%;
+      padding: 0.6rem;
+  }
+
+  .enquiry-form .send-message-btn {
+      font-size: 0.9rem;
+  }
+}
+
+/* collapse-wrapper */
+.collapse-container {
+  transition: max-height 0.4s ease;
+}
+
+.collapse-container.collapsed {
+  max-height: 400px;       /* adjust preview height */
+  overflow: hidden;
+  position: relative;
+}
+
+/* fade‐out just on the inner box, using white → transparent */
+.collapse-container.collapsed::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;            /* height of fade */
+  background: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1)
+  );
+  pointer-events: none;
+}
+
+.collapse-container.expanded {
+  max-height: none;
+}
+
+/* keep your old .visa-info-text styling unchanged */
+
+/* Read-more button styling */
+.read-more-btn {
+  display: block;
+  margin: 1rem auto 0;
+  background: none;
+  border: none;
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.read-more-btn:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 480px) {
+  .visa-info-container {
+      padding: 1rem 0;
+  }
+
+  .visa-info-content {
+      max-width: 100%;
+      padding: 0 10px;
+  }
+
+  .visa-info-text {
+      padding: 0.8rem;
+  }
+
+  .visa-info-text h2 {
+      font-size: 1.1rem;
+  }
+
+  .visa-info-text p,
+  .visa-info-text li {
+      font-size: 0.85rem;
+  }
+
+  .enquiry-form {
+      padding: 0.8rem;
+  }
+
+  .enquiry-form h2 {
+      font-size: 1.2rem;
+  }
+
+  .enquiry-form .send-message-btn {
+      font-size: 0.85rem;
+      padding: 0.7rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .enquiry-form {
+    max-width: 450px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .enquiry-form {
+    padding: 1.75rem 1.5rem;
+  }
+  .enquiry-form h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Large phones / portrait tablets */
+@media (max-width: 768px) {
+  .enquiry-form {
+    padding: 1.5rem 1.25rem;
+  }
+  .enquiry-form h2 {
+    font-size: 1.45rem;
+  }
+  .enquiry-form input,
+  .enquiry-form textarea {
+    font-size: 0.95rem;
+  }
+  .enquiry-form .send-message-btn {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .enquiry-form {
+    padding: 1.25rem 1rem;
+    width: 96vw;
+  }
+  .enquiry-form h2 {
+    font-size: 1.3rem;
+  }
+  .enquiry-form input,
+  .enquiry-form textarea {
+    padding: 0.65rem;
+    font-size: 0.9rem;
+  }
+  .enquiry-form .send-message-btn {
+    padding: 0.85rem;
+    font-size: 0.9rem;
+  }
+}
+

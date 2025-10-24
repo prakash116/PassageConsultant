@@ -1,0 +1,273 @@
+
+/* ImmigrationServices.css */
+*{
+  font-family: 'Cambria', 'Times New Roman', Times, serif;
+}
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.services-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.services-description {
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  color: #555;
+  padding: 0 10px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.card-container {
+  perspective: 1000px;
+  height: 300px;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.card-container:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  overflow: hidden; /* Prevents scrollbars */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-front {
+  background-color: #222;
+  color: white;
+}
+
+.card-back {
+  background-color: #f8f8f8;
+  color: #333;
+  transform: rotateY(180deg);
+}
+
+/* Overlay for better text readability on image backgrounds */
+.card-front::before, .card-back::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.card-front::before {
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for front card */
+}
+
+.card-back::before {
+  background-color: rgba(255, 255, 255, 0.8); /* Light overlay for back card */
+}
+
+.country-code {
+  position: absolute;
+  top: 20px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.flag-icon {
+  margin-bottom: 15px;
+  z-index: 1;
+  position: relative;
+}
+
+.flag-icon img {
+  display: block;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  z-index: 1;
+  position: relative;
+}
+
+.card-content {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-height: 150px;
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /* Limit to approximately 6 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 1;
+  position: relative;
+}
+
+.learn-more-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 1;
+  position: relative;
+}
+
+.learn-more-btn:hover {
+  background-color: #0055aa;
+}
+
+/* Comprehensive responsive design */
+@media (max-width: 1100px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .services-title {
+    font-size: 2rem;
+  }
+  
+  .card-container {
+    height: 320px;
+  }
+  
+  .card-content {
+    -webkit-line-clamp: 7;
+  }
+  
+  .flag-icon img {
+    width: 54px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .card-container {
+    height: 280px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .services-description {
+    font-size: 0.9rem;
+  }
+  
+  .card-content {
+    -webkit-line-clamp: 5;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-container {
+    padding: 15px 10px;
+  }
+  
+  .services-grid {
+    gap: 25px;
+  }
+  
+  .services-title {
+    font-size: 1.8rem;
+  }
+  
+  .card-container {
+    height: 260px;
+  }
+  
+  .card-front, .card-back {
+    padding: 15px;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  .card-content {
+    font-size: 0.85rem;
+    -webkit-line-clamp: 4;
+  }
+  
+  .flag-icon img {
+    width: 48px;
+    height: 36px;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 350px) {
+  .card-container {
+    height: 300px;
+  }
+  
+  .services-title {
+    font-size: 1.6rem;
+  }
+  
+  .flag-icon img {
+    width: 40px;
+    height: 30px;
+  }
+}
+
+/* Ensure box-sizing is consistent */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
