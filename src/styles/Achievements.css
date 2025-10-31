@@ -14,24 +14,31 @@
   }
   
   .achievements__logos {
-    display: flex;
-    justify-content:space-evenly;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     align-items: center;
-    gap: 2rem;         
-    flex-wrap: wrap;    
+    justify-items: center;
+    gap: 1rem;
   }
   
   .achievements__logo {
-    max-width: 180px;    /* or any size you prefer */
+    width: 100%;
+    max-width: 150px;
     height: auto;
     object-fit: contain;
   }
   
-  /* Responsive tweaks */
+  /* Mobile view */
   @media (max-width: 768px) {
-    .achievements__logo {
-      max-width: 140px;
+    .achievements__logos {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
     }
+    
+    .achievements__logo {
+      max-width: 120px;
+    }
+    
     .achievements__title {
       font-size: 1.75rem;
     }
@@ -41,8 +48,8 @@
     .achievements__logo {
       max-width: 100px;
     }
+    
     .achievements__title {
       font-size: 1.5rem;
     }
   }
-  
