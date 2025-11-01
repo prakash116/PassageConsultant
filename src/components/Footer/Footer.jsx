@@ -2,6 +2,7 @@ import React from 'react';
 import '../../styles/footer.css';
 import logo from "../../assets/logo.png";
 import { FaPhoneAlt, FaWhatsapp, FaCheckCircle, FaClock, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
+import { Link, useLocation } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -23,11 +24,11 @@ const Footer = () => {
         <div className="links-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/">Services</Link></li>
+            <li><Link to="/">Blog</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
 
@@ -71,7 +72,7 @@ const Footer = () => {
             </div>
             <div className="contact-item">
               <a href="tel:919873433413">
-                <FaCheckCircle className="icon" /> +91-9873433413
+                <FaCheckCircle className="icon" /> +91-8595761513 
               </a>
             </div>
           </div>
