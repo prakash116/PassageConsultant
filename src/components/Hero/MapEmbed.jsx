@@ -3,7 +3,7 @@ import React from 'react';
 const MapEmbed = () => (
   <div style={{ width: '100%', height: '450px' }}>
     <iframe
-      title="Jyoti Shikhar Building Location"
+      title="512B, Jyoti Shikhar Building Location"
       width="100%"
       height="100%"
       style={{ border: 0 }}

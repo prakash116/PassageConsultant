@@ -78,7 +78,7 @@ const Footer = () => {
           <h3>Contact us</h3>
           <address>
             <FaMapMarkerAlt className="icon" />
-            512A, Jyoti Shikar Building, District
+            512B, Jyoti Shikar Building, District
             <br />
             Center Janakpuri, New Delhi-110058,
             <br />
