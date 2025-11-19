@@ -1,6 +1,6 @@
 import Achievements from "../components/Hero/Achievements";
 import "../styles/contact.css";
-import MapEmbed from "../components/Hero/MapEmbed"
+import MapEmbed from "../components/Hero/MapEmbed";
 import contact from "../assets/Contact.mp4";
 
 import {
@@ -14,46 +14,46 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function ContactUs() {
-
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const serviceId = 'service_q1a8we6';
-    const templateId = 'template_jimir7q';
-    const publicKey = 'OgtfaEH7_6KMtMjbp';
+    const serviceId = "service_q1a8we6";
+    const templateId = "template_jimir7q";
+    const publicKey = "OgtfaEH7_6KMtMjbp";
 
     const templateParams = {
       from_name: name,
       from_email: email,
       from_phone: phone,
-      to_name: 'Passage Consultants',
+      to_name: "Passage Consultants",
       message: message,
-    }
+    };
 
-    emailjs.send(serviceId, templateId, templateParams, publicKey)
+    emailjs
+      .send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {
-        console.log('Email sent Successfully ', response);
-        setName('');
-        setEmail('');
-        setPhone('');
-        setMessage('');
-        alert('Message sent successfully!');
+        console.log("Email sent Successfully ", response);
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+        alert("Message sent successfully!");
       })
       .catch((error) => {
-        console.error('Error sending email', error);
-        alert('Failed to send message. Please try again.');
+        console.error("Error sending email", error);
+        alert("Failed to send message. Please try again.");
       })
       .finally(() => {
         setIsSubmitting(false);
       });
-  }
+  };
 
   return (
     <>
@@ -79,62 +79,62 @@ export default function ContactUs() {
             <form onSubmit={handleSubmit} className="contact-form">
               <div className="form-group">
                 <label htmlFor="name">Name</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  placeholder="Your Name" 
-                  name="from_name" 
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Your Name"
+                  name="from_name"
                   value={name}
-                  onChange={(e) => setName(e.target.value)} 
+                  onChange={(e) => setName(e.target.value)}
                   required
                   disabled={isSubmitting}
                 />
               </div>
               <div className="form-group">
                 <label htmlFor="email">Email</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  placeholder="Your Email" 
-                  name="from_email" 
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Your Email"
+                  name="from_email"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)} 
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                   disabled={isSubmitting}
                 />
               </div>
               <div className="form-group">
                 <label htmlFor="phone">Mobile No</label>
-                <input 
-                  type="tel" 
-                  id="phone" 
-                  placeholder="Your Mobile Number" 
-                  name="from_phone" 
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="Your Mobile Number"
+                  name="from_phone"
                   value={phone}
-                  onChange={(e) => setPhone(e.target.value)} 
+                  onChange={(e) => setPhone(e.target.value)}
                   required
                   disabled={isSubmitting}
                 />
               </div>
               <div className="form-group">
                 <label htmlFor="message">Message</label>
-                <textarea 
-                  id="message" 
-                  placeholder="Your Message" 
-                  name="message" 
+                <textarea
+                  id="message"
+                  placeholder="Your Message"
+                  name="message"
                   value={message}
-                  onChange={(e) => setMessage(e.target.value)} 
+                  onChange={(e) => setMessage(e.target.value)}
                   required
                   disabled={isSubmitting}
                   rows="5"
                 />
               </div>
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="contact-btn"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 'Sending...' : 'Send Now'}
+                {isSubmitting ? "Sending..." : "Send Now"}
               </button>
             </form>
           </div>
@@ -158,23 +158,21 @@ export default function ContactUs() {
                 New Delhi-110058
               </li>
               <li>
-                <a href="tel:01146021515">
-                  <FaPhoneAlt className="detail-icon" />
-                  01146021515
-                </a>
-
-              </li>
-              <li>
                 <a href="https://wa.me/919711161513">
                   <FaWhatsapp className="detail-icon" />
                   +91-9711161513
                 </a>
-
+              </li>
+              <li>
+                <a href="tel:01146021515">
+                  <FaPhoneAlt className="detail-icon" />
+                  01146021515
+                </a>
               </li>
               <li>
                 <a href="mailto:info@passageconsultants.in">
-                <FaEnvelope className="detail-icon" />
-                info@passageconsultants.in
+                  <FaEnvelope className="detail-icon" />
+                  info@passageconsultants.in
                 </a>
               </li>
               <li>

@@ -1,8 +1,15 @@
-import React from 'react';
-import '../../styles/footer.css';
+import React from "react";
+import "../../styles/footer.css";
 import logo from "../../assets/logo.png";
-import { FaPhoneAlt, FaWhatsapp, FaCheckCircle, FaClock, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
-import { Link, useLocation } from 'react-router-dom';
+import {
+  FaPhoneAlt,
+  FaWhatsapp,
+  FaCheckCircle,
+  FaClock,
+  FaMapMarkerAlt,
+  FaPaperPlane,
+} from "react-icons/fa";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -14,8 +21,10 @@ const Footer = () => {
             <img src={logo} alt="logo" style={{ width: 200, height: 120 }} />
           </div>
           <p className="tagline">
-            Passage Consultants LLP is One Of<br />
-            The Highly Recognized Immigration<br />
+            Passage Consultants LLP is One Of
+            <br />
+            The Highly Recognized Immigration
+            <br />
             And All type of Visa Related Services
           </p>
         </div>
@@ -24,11 +33,21 @@ const Footer = () => {
         <div className="links-section">
           <h3>Quick Links</h3>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/">Services</Link></li>
-            <li><Link to="/">Blog</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/">Services</Link>
+            </li>
+            <li>
+              <Link to="/">Blog</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
           </ul>
         </div>
 
@@ -38,7 +57,9 @@ const Footer = () => {
           <div className="time-item">
             <FaClock className="icon" />
             <span className="time-label">Opening Day:</span>
-            <span className="time-value">Monday - Friday: 10:00 AM To 6:30 PM</span>
+            <span className="time-value">
+              Monday - Friday: 10:00 AM To 6:30 PM
+            </span>
           </div>
           <div className="time-item">
             <span className="time-value">Saturday : 10:00 AM To 02:00 PM</span>
@@ -46,7 +67,9 @@ const Footer = () => {
           <div className="time-item vacation">
             <FaPaperPlane className="icon" />
             <span className="time-label">Vacation:</span>
-            <span className="time-value">Sunday, though always available on phone</span>
+            <span className="time-value">
+              Sunday, though always available on phone
+            </span>
           </div>
         </div>
 
@@ -55,8 +78,10 @@ const Footer = () => {
           <h3>Contact us</h3>
           <address>
             <FaMapMarkerAlt className="icon" />
-            512A, Jyoti Shikar Building, District<br />
-            Center Janakpuri, New Delhi-110058,<br />
+            512A, Jyoti Shikar Building, District
+            <br />
+            Center Janakpuri, New Delhi-110058,
+            <br />
             India.
           </address>
           <div className="contact-details">
@@ -71,8 +96,8 @@ const Footer = () => {
               </a>
             </div>
             <div className="contact-item">
-              <a href="tel:919873433413">
-                <FaCheckCircle className="icon" /> +91-8595761513 
+              <a href="tel:+918595761513">
+                <FaCheckCircle className="icon" /> +91-8595761513
               </a>
             </div>
           </div>

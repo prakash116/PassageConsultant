@@ -7,13 +7,13 @@ const UpperNavbar = () => {
     <div className="upper-navbar">
       <div className="contact-info">
         <p>Have any questions?</p>
-        <a href="tel:01146021515">
-          <FaPhone size={16} />
-          01146021515
-        </a>
         <a href="https://wa.me/919711161513">
           <FaWhatsapp size={16} />
           +91-9711161513
+        </a>
+        <a href="tel:01146021515">
+          <FaPhone size={16} />
+          01146021515
         </a>
         <a href="mailto:info@passageconsultants.in">
           <span className="email-icon">✉</span>

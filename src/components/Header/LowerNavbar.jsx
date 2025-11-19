@@ -263,10 +263,9 @@ const LowerNavbar = () => {
           <Search size={20} />
         </button>
         <button className="call-btn">
-          <a href="tel:01146021515">
+          <a href="tel:+919711161513">
             Call Us
           </a>
-
         </button>
       </div>
     </div>

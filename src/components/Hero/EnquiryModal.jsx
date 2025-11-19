@@ -141,7 +141,7 @@ const EnquiryModal = ({ isOpen, onClose }) => {
 
               <div className="call-section">
                 <p>Call us for details</p>
-                <a href="tel:+919818064278">+91-9711161513</a>
+                <a href="tel:+919711161513">+91-9711161513</a>
               </div>
             </div>
 
