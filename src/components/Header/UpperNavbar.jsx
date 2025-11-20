@@ -1,19 +1,27 @@
-import React from 'react';
-import '../../styles/uppernavbar.css';
-import { FaWhatsapp, FaPhone, FaTwitter, FaFacebook, FaLinkedin, FaInstagram, FaYoutube } from 'react-icons/fa';
+import React from "react";
+import "../../styles/uppernavbar.css";
+import {
+  FaWhatsapp,
+  FaPhone,
+  FaTwitter,
+  FaFacebook,
+  FaLinkedin,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
 
 const UpperNavbar = () => {
   return (
     <div className="upper-navbar">
       <div className="contact-info">
         <p>Have any questions?</p>
-        <a href="https://wa.me/919711161513">
+        <a href="https://wa.me/+91 8595761513">
           <FaWhatsapp size={16} />
-          +91-9711161513
+          +91 8595761513
         </a>
-        <a href="tel:01146021515">
+        <a href="tel:+91 9711161513">
           <FaPhone size={16} />
-          01146021515
+          +91 9711161513
         </a>
         <a href="mailto:info@passageconsultants.in">
           <span className="email-icon">✉</span>
@@ -21,11 +29,21 @@ const UpperNavbar = () => {
         </a>
       </div>
       <div className="social-icons">
-        <a href="https://x.com/passageconsult"><span style={{ fontWeight: 'bold', fontSize: 17 }}>X</span></a>
-        <a href="https://www.facebook.com/passageconsultantsllp"><FaFacebook size={16} /></a>
-        <a href="https://www.linkedin.com/in/kamalpreet-singh-kohli-57451416/"><FaLinkedin size={16} /></a>
-        <a href="https://www.instagram.com/passageconsultants/#"><FaInstagram size={16} /></a>
-        <a href="https://www.youtube.com/@PassageConsultants"><FaYoutube size={16} /></a>
+        <a href="https://x.com/passageconsult">
+          <span style={{ fontWeight: "bold", fontSize: 17 }}>X</span>
+        </a>
+        <a href="https://www.facebook.com/passageconsultantsllp">
+          <FaFacebook size={16} />
+        </a>
+        <a href="https://www.linkedin.com/in/kamalpreet-singh-kohli-57451416/">
+          <FaLinkedin size={16} />
+        </a>
+        <a href="https://www.instagram.com/passageconsultants/#">
+          <FaInstagram size={16} />
+        </a>
+        <a href="https://www.youtube.com/@PassageConsultants">
+          <FaYoutube size={16} />
+        </a>
       </div>
     </div>
   );

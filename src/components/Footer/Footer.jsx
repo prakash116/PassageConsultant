@@ -92,12 +92,12 @@ const Footer = () => {
             </div>
             <div className="contact-item">
               <a href="https://wa.me/919711161513">
-                <FaWhatsapp className="icon" /> +91-9711161513
+                <FaWhatsapp className="icon" /> +91-8595761513  
               </a>
             </div>
             <div className="contact-item">
               <a href="tel:+918595761513">
-                <FaCheckCircle className="icon" /> +91-8595761513
+                <FaCheckCircle className="icon" /> +91-9711161513
               </a>
             </div>
           </div>

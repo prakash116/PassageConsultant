@@ -160,13 +160,13 @@ export default function ContactUs() {
               <li>
                 <a href="https://wa.me/919711161513">
                   <FaWhatsapp className="detail-icon" />
-                  +91-9711161513
+                  +91-8595761513
                 </a>
               </li>
               <li>
                 <a href="tel:01146021515">
                   <FaPhoneAlt className="detail-icon" />
-                  01146021515
+                  +91 9711161513
                 </a>
               </li>
               <li>
